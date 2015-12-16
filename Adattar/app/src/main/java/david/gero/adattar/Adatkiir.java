@@ -15,4 +15,20 @@ public class Adatkiir {
         _Lakcim = Lakcim;
 
     }
+
+    public String get_Nev(){
+        return _Nev;
+    }
+
+    public  String get_Email(){
+        return _Email;
+    }
+
+    public String get_Telefonszam(){
+        return _Telefonszam;
+    }
+
+    public String get_Lakcim(){
+        return  _Lakcim;
+    }
 }

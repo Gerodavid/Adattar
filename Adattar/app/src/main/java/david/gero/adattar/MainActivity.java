@@ -7,6 +7,7 @@ import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.Menu;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TabHost;
@@ -16,10 +17,13 @@ import com.google.android.gms.appindexing.Action;
 import com.google.android.gms.appindexing.AppIndex;
 import com.google.android.gms.common.api.GoogleApiClient;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class MainActivity extends AppCompatActivity {
 
     EditText Nevtxt, Emailtxt, Telefonszamtxt, Lakcimtxt;
-
+    List<Adatkiir> Adatkiiras = new ArrayList<Adatkiir>();
 
 
     @Override
@@ -50,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
         addBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(getApplicationContext(),"Az ön adatait felvittük", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), "Az ön adatait felvittük", Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -73,8 +77,11 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-    }
 
+    }
+    private class ContactListAdapter extends ArrayAdapter<Adatkiir>{
+
+    }
 }
 
 
