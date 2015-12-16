@@ -8,62 +8,101 @@
     android:orientation="vertical">
 
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Adatok Bekérése"
-        android:id="@+id/Idtar"
-        android:layout_gravity="center"
-        android:layout_marginTop="10dp" />
+    <TabHost
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/tabHost">
 
-    <EditText
-        android:layout_width="250dp"
-        android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:ems="10"
-        android:id="@+id/txtNev"
-        android:layout_gravity="center"
-        android:layout_marginTop="10dp"
-        android:hint="Személy Neve" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
-    <EditText
-        android:layout_width="250dp"
-        android:layout_height="wrap_content"
-        android:inputType="textEmailAddress"
-        android:ems="10"
-        android:id="@+id/txtEmail"
-        android:layout_gravity="center"
-        android:layout_marginTop="10dp"
-        android:hint="Email Cím" />
+            <TabWidget
+                android:id="@android:id/tabs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"></TabWidget>
 
-    <EditText
-        android:layout_width="250dp"
-        android:layout_height="wrap_content"
-        android:inputType="phone"
-        android:ems="10"
-        android:id="@+id/txtTelefonszam"
-        android:layout_gravity="center"
-        android:layout_marginTop="10dp"
-        android:hint="Telefonszám" />
+            <FrameLayout
+                android:id="@android:id/tabcontent"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
 
-    <EditText
-        android:layout_width="250dp"
-        android:layout_height="wrap_content"
-        android:inputType="textPostalAddress"
-        android:ems="10"
-        android:id="@+id/txtLakcim"
-        android:layout_gravity="center"
-        android:layout_marginTop="10dp"
-        android:hint="Lakcím" />
+                <LinearLayout
+                    android:id="@+id/tabAdat"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
 
-    <Button
-        android:layout_width="125dp"
-        android:layout_height="wrap_content"
-        android:text="Véglegesítés"
-        android:id="@+id/gomb"
-        android:layout_gravity="center"
-        android:layout_marginTop="20dp"
-        android:background="#55dc0c"
-        android:textColor="#782101" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:text="Adatok Bekérése"
+                        android:id="@+id/Idtar"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="10dp" />
+
+                    <EditText
+                        android:layout_width="250dp"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPersonName"
+                        android:ems="10"
+                        android:id="@+id/txtNev"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="10dp"
+                        android:hint="Személy Neve" />
+
+                    <EditText
+                        android:layout_width="250dp"
+                        android:layout_height="wrap_content"
+                        android:inputType="textEmailAddress"
+                        android:ems="10"
+                        android:id="@+id/txtEmail"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="10dp"
+                        android:hint="Email Cím" />
+
+                    <EditText
+                        android:layout_width="250dp"
+                        android:layout_height="wrap_content"
+                        android:inputType="phone"
+                        android:ems="10"
+                        android:id="@+id/txtTelefonszam"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="10dp"
+                        android:hint="Telefonszám" />
+
+                    <EditText
+                        android:layout_width="250dp"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPostalAddress"
+                        android:ems="10"
+                        android:id="@+id/txtLakcim"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="10dp"
+                        android:hint="Lakcím" />
+
+                    <Button
+                        android:layout_width="125dp"
+                        android:layout_height="wrap_content"
+                        android:text="Véglegesítés"
+                        android:id="@+id/btnAdd"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="20dp"
+                        android:background="#55dc0c"
+                        android:textColor="#782101"
+                        android:enabled="false" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/tabKiir"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"></LinearLayout>
+
+            </FrameLayout>
+        </LinearLayout>
+    </TabHost>
+
 </LinearLayout>
