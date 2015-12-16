@@ -81,6 +81,9 @@ public class MainActivity extends AppCompatActivity {
     }
     private class ContactListAdapter extends ArrayAdapter<Adatkiir>{
 
+        public ContactListAdapter(){
+            super(MainActivity.this,R.layout.adatkiir_lista, Adatkiiras);
+        }
     }
 }
 
