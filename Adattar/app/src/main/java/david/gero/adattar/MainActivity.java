@@ -8,6 +8,7 @@ import android.text.TextWatcher;
 import android.view.Menu;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TabHost;
 
 import com.google.android.gms.appindexing.Action;
 import com.google.android.gms.appindexing.AppIndex;
@@ -29,6 +30,20 @@ public class MainActivity extends AppCompatActivity {
         Emailtxt= (EditText) findViewById(R.id.txtEmail);
         Telefonszamtxt=(EditText) findViewById(R.id.txtTelefonszam);
         Lakcimtxt= (EditText) findViewById(R.id.txtLakcim);
+        TabHost tabHost = (TabHost) findViewById(R.id.tabHost);
+
+        tabHost.setup();
+
+        TabHost.TabSpec tabSpec = tabHost.newTabSpec("adatbekero");
+        tabSpec.setContent(R.id.tabAdat);
+        tabSpec.setIndicator("Adatbekérő");
+        tabHost.addTab(tabSpec);
+
+        tabSpec = tabHost.newTabSpec("adatkiiro");
+        tabSpec.setContent(R.id.tabKiir);
+        tabSpec.setIndicator("Adatkiírás");
+        tabHost.addTab(tabSpec);
+
         final Button addBtn=(Button) findViewById(R.id.btnAdd);
 
         Nevtxt.addTextChangedListener(new TextWatcher() {
