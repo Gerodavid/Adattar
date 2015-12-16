@@ -1,0 +1,22 @@
+Funkcionális Specifikáció
+
+Egy Android alkalmazásal bízom meg önt.
+Ezen az applikáción fogjuk tárolni a dolgozókról az adatokat.
+Az adatokat a felhasználókról akiket felveszünk az applikációba kilistázva jelenüljenek meg.
+Az adatok amelyeket mindenképp fel kell venni minden egyes dolgozóról:
+
+	- Személy Neve
+	- Email Cím
+	- Telefonszám
+	- Lakcím
+
+Elvárandó feltételek:
+
+	-Az emailnél való megadáson kívül máshova ne lehessen @ karaktert beírni
+	-A Telefonszámnál ne lehessen szöveges karaktert beírni
+	-Az adatbekérés végén egy jól látható gombal lehessen az adatokat véglegesíteni.
+	-A kilistázás átlátható legyen
+
+Az applikációt a github rendszerére kéretik feltölteni, ütemezetten átláthatóan.
+Az applikációt a következõ idõpontra kéretik véglegesen feltenni, utána való módosítást nem fogadok el: 2015.12.17 13:40.
+A kész applikációt az elõrre megbeszélt helyen kéretik bemutatni.
