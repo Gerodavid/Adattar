@@ -6,9 +6,11 @@ import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.Menu;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TabHost;
+import android.widget.Toast;
 
 import com.google.android.gms.appindexing.Action;
 import com.google.android.gms.appindexing.AppIndex;
@@ -45,6 +47,12 @@ public class MainActivity extends AppCompatActivity {
         tabHost.addTab(tabSpec);
 
         final Button addBtn=(Button) findViewById(R.id.btnAdd);
+        addBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(getApplicationContext(),"Az ön adatait felvittük", Toast.LENGTH_SHORT).show();
+            }
+        });
 
         Nevtxt.addTextChangedListener(new TextWatcher() {
             @Override
