@@ -57,7 +57,8 @@ public class MainActivity extends AppCompatActivity {
         addBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(getApplicationContext(), "Az ön adatait felvittük", Toast.LENGTH_SHORT).show();
+                Adattovabbitas(Nevtxt.getText().toString(), Emailtxt.getText().toString(), Telefonszamtxt.getText().toString(), Lakcimtxt.getText().toString());
+                Toast.makeText(getApplicationContext(), Nevtxt.getText().toString() + " személy adatait felvettük", Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -79,9 +80,13 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
-
+}
+    private void Adattovabbitas(String Nev, String Email, String Telefonszam, String Lakcim){
+        Adatkiiras.add(new Adatkiir(Nev, Email, Telefonszam, Lakcim));
 
     }
+
+
     private class ContactListAdapter extends ArrayAdapter<Adatkiir>{
 
         public ContactListAdapter(){
