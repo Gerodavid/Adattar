@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context="david.gero.adattar.MainActivity"
+    android:orientation="vertical">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Adatok Bekérése"
+        android:id="@+id/Idtar"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp" />
+
+    <EditText
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:id="@+id/txtNev"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:hint="Személy Neve" />
+
+    <EditText
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:inputType="textEmailAddress"
+        android:ems="10"
+        android:id="@+id/txtEmail"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:hint="Email Cím" />
+
+    <EditText
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:inputType="phone"
+        android:ems="10"
+        android:id="@+id/txtTelefonszam"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:hint="Telefonszám" />
+
+    <EditText
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:inputType="textPostalAddress"
+        android:ems="10"
+        android:id="@+id/txtLakcim"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:hint="Lakcím" />
+
+    <Button
+        android:layout_width="125dp"
+        android:layout_height="wrap_content"
+        android:text="Véglegesítés"
+        android:id="@+id/gomb"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:background="#55dc0c"
+        android:textColor="#782101" />
+</LinearLayout>
