@@ -1,16 +1,19 @@
 package david.gero.adattar;
 
 import android.net.Uri;
+import android.provider.ContactsContract;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.Menu;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TabHost;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.appindexing.Action;
@@ -83,6 +86,25 @@ public class MainActivity extends AppCompatActivity {
 
         public ContactListAdapter(){
             super(MainActivity.this,R.layout.adatkiir_lista, Adatkiiras);
+        }
+
+        @Override
+        public View getView(int position, View view, ViewGroup parent){
+            if(view == null)
+                view =getLayoutInflater().inflate(R.layout.adatkiir_lista, parent, false);
+
+            Adatkiir jelenlegiAdatkiir =Adatkiiras.get(position);
+
+            TextView Nev = (TextView) view.findViewById(R.id.dolgozoNev);
+            Nev.setText(jelenlegiAdatkiir.get_Nev());
+            TextView Email = (TextView) view.findViewById(R.id.EmailAdat);
+            Email.setText(jelenlegiAdatkiir.get_Email());
+            TextView Telefonszam = (TextView) view.findViewById(R.id.TelefonSzam);
+            Telefonszam.setText(jelenlegiAdatkiir.get_Telefonszam());
+            TextView Lakcim = (TextView) view.findViewById(R.id.Lakcim);
+            Lakcim.setText(jelenlegiAdatkiir.get_Lakcim());
+
+            return view;
         }
     }
 }
