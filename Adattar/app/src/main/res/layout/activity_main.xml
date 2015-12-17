@@ -113,7 +113,8 @@
                         android:text="Dolgozók Kiíratása"
                         android:id="@+id/Golgozo"
                         android:layout_gravity="center"
-                        android:layout_marginTop="15dp" />
+                        android:layout_marginTop="15dp"
+                        android:textSize="40dp" />
 
                     <ListView
                         android:layout_width="match_parent"
