@@ -12,6 +12,7 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ListView;
 import android.widget.TabHost;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -27,6 +28,7 @@ public class MainActivity extends AppCompatActivity {
 
     EditText Nevtxt, Emailtxt, Telefonszamtxt, Lakcimtxt;
     List<Adatkiir> Adatkiiras = new ArrayList<Adatkiir>();
+    ListView AdattovabittasListView;
 
 
     @Override
@@ -39,6 +41,7 @@ public class MainActivity extends AppCompatActivity {
         Emailtxt= (EditText) findViewById(R.id.txtEmail);
         Telefonszamtxt=(EditText) findViewById(R.id.txtTelefonszam);
         Lakcimtxt= (EditText) findViewById(R.id.txtLakcim);
+        AdattovabittasListView = (ListView) findViewById(R.id.listView);
         TabHost tabHost = (TabHost) findViewById(R.id.tabHost);
 
         tabHost.setup();
@@ -58,6 +61,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Adattovabbitas(Nevtxt.getText().toString(), Emailtxt.getText().toString(), Telefonszamtxt.getText().toString(), Lakcimtxt.getText().toString());
+                Kilistazas();
                 Toast.makeText(getApplicationContext(), Nevtxt.getText().toString() + " személy adatait felvettük", Toast.LENGTH_SHORT).show();
             }
         });
@@ -81,11 +85,15 @@ public class MainActivity extends AppCompatActivity {
 
 
 }
-    private void Adattovabbitas(String Nev, String Email, String Telefonszam, String Lakcim){
-        Adatkiiras.add(new Adatkiir(Nev, Email, Telefonszam, Lakcim));
-
+    private void Kilistazas(){
+        ArrayAdapter<Adatkiir> adapter = new ContactListAdapter();
+        AdattovabittasListView.setAdapter(adapter);
     }
 
+
+    private void Adattovabbitas(String Nev, String Email, String Telefonszam, String Lakcim){
+        Adatkiiras.add(new Adatkiir(Nev, Email, Telefonszam, Lakcim));
+    }
 
     private class ContactListAdapter extends ArrayAdapter<Adatkiir>{
 
