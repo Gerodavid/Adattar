@@ -96,7 +96,7 @@
                         android:layout_gravity="center"
                         android:layout_marginTop="20dp"
                         android:background="#000000"
-                        android:textColor="#782101"
+                        android:textColor="#ffffff"
                         android:enabled="false"
                         android:textSize="20dp" />
                 </LinearLayout>
