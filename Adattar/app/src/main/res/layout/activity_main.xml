@@ -41,7 +41,8 @@
                         android:text="Adatok Bekérése"
                         android:id="@+id/Idtar"
                         android:layout_gravity="center"
-                        android:layout_marginTop="10dp" />
+                        android:layout_marginTop="10dp"
+                        android:textSize="40dp" />
 
                     <EditText
                         android:layout_width="300dp"
@@ -51,7 +52,8 @@
                         android:id="@+id/txtNev"
                         android:layout_gravity="center"
                         android:layout_marginTop="10dp"
-                        android:hint="Személy Neve" />
+                        android:hint="Személy Neve"
+                        android:textSize="25dp" />
 
                     <EditText
                         android:layout_width="300dp"
@@ -61,7 +63,8 @@
                         android:id="@+id/txtEmail"
                         android:layout_gravity="center"
                         android:layout_marginTop="10dp"
-                        android:hint="Email Cím" />
+                        android:hint="Email Cím"
+                        android:textSize="25dp" />
 
                     <EditText
                         android:layout_width="300dp"
@@ -71,7 +74,8 @@
                         android:id="@+id/txtTelefonszam"
                         android:layout_gravity="center"
                         android:layout_marginTop="10dp"
-                        android:hint="Telefonszám" />
+                        android:hint="Telefonszám"
+                        android:textSize="25dp" />
 
                     <EditText
                         android:layout_width="300dp"
@@ -81,10 +85,11 @@
                         android:id="@+id/txtLakcim"
                         android:layout_gravity="center"
                         android:layout_marginTop="10dp"
-                        android:hint="Lakcím" />
+                        android:hint="Lakcím"
+                        android:textSize="25dp" />
 
                     <Button
-                        android:layout_width="125dp"
+                        android:layout_width="200dp"
                         android:layout_height="wrap_content"
                         android:text="Véglegesítés"
                         android:id="@+id/btnAdd"
