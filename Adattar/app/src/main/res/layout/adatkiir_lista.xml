@@ -9,26 +9,34 @@
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="Dolgozó Neve"
         android:id="@+id/dolgozoNev"
-        android:layout_marginTop="10dp" />
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center"
+        android:textSize="40dp" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Email"
         android:id="@+id/EmailAdat"
-        android:layout_marginTop="4dp" />
+        android:layout_marginTop="4dp"
+        android:layout_gravity="center"
+        android:textSize="25dp" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Telefonszám"
         android:id="@+id/TelefonSzam"
-        android:layout_marginTop="4dp" />
+        android:layout_marginTop="4dp"
+        android:layout_gravity="center"
+        android:textSize="25dp" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Lakcím"
         android:id="@+id/Lakcim"
-        android:layout_marginTop="4dp" />
+        android:layout_marginTop="4dp"
+        android:layout_gravity="center"
+        android:textSize="25dp" />
 </LinearLayout>
