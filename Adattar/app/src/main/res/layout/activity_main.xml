@@ -99,7 +99,7 @@
                         android:background="#000000"
                         android:textColor="#ffffff"
                         android:enabled="false"
-                        android:textSize="20dp" />
+                        android:textSize="25dp" />
                 </LinearLayout>
 
                 <LinearLayout
